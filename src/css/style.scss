@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #00d84f;
+}
+
+main{
+    display: flex;
+}
+
+.leftSide{
+    max-width: 40vw;
+    width: 40vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    img{
+        width: 200px;
+        margin:0 auto;
+    }
+
+    p{
+        color: red;
+    }
+}
+
+.leftSideText{
+    width: max-content;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    label{
+     color: #00d84f;
+     font-weight: 700;
+     font-size: 2rem;
+    }
+
+    input{
+        height: min-content;
+        font-size: 1.2rem;
+        padding: 5px;
+        border: none;
+        background-color: #f7f7f7;
+        border-radius: 6px;
+        font-weight: 700;
+    }
+
+    input[type=text]:focus {
+        outline: 2px solid #00d84f;
+      }
+
+      input[type=number]:focus {
+        outline: 2px solid #00d84f;
+      }
+
+    div{
+        width: 300px;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.customCard, .logoCard{
+    max-width: 400px;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    p{
+        color: #00d84f;
+        font-weight: 700;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .colorDiv, .logoDiv{
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .color{
+        width: 100%;
+        height: 50px;
+        background-color:#f7f7f7;
+        border-radius: 6px;
+    }
+
+    .color:hover, .logoC:hover{
+        cursor: pointer;
+        box-shadow: 0 0 1em #00d84fc2;
+    }
+    
+    .logoC{
+        width: 50px;
+        height: 50px;
+        background-color: #041f08;
+        border-radius: 10px;
+        display: flex;
+
+        img{
+            width: 35px;
+            height: 40px;
+            margin: auto;
+        }
+    }
+
+}
+
+.footer{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img{
+        width: 150px;
+    }
+
+    .mediaSocial{
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    .mediaSocial img{
+        width: 50px;       
+    }
+}
+
+.rightSide{
+    width: max-content;
+    height: max-content;
+    margin: auto;
+}
+
+.card{
+    width: 688px;
+    height: 400px;
+    color: #00d84f;
+    display: flex;
+    box-shadow: 0 0 4em black;
+    transform: rotateX(-45deg) rotateZ(40deg);
+    transition: 0.5s;
+    animation: card 3s ease-in-out infinite;
+    position: relative;
+    transition: 0.5s;
+    border-radius: 20px;
+    background-image: url('https://uploaddeimagens.com.br/images/003/765/196/full/logo4.png?1646942230');
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @keyframes card{
+        0%{
+            top: 0;
+        }
+        50%{
+            top: 20px;
+        }
+        100%{
+            top: 0;
+        }
+    }
+}
+
+.cardCont{
+    width: 90%;
+    height: 300px;
+    margin: auto;
+    color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    h1{
+        font-size: 2.3rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    h3{
+        height: 96px;
+        font-size: 5rem;
+    }
+
+    .midTextCard{
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+
+        div{
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        span{
+            font-weight: 700;
+        }
+    }
+   
+}
+
+@media (max-width: 1310px){
+    main{
+        flex-direction: column;
+    }
+
+    .leftSide{
+        max-width: 100vw;
+        width: unset;
+    }
+
+    .rightSide{
+        margin: 80px auto;
+    }
+
+    .card{
+        transform: unset;
+        animation: unset;
+
+    }
+}
+
+@media (max-width: 720px){
+    .card{
+        width: 350px;
+        height: 200px;
+        background-size: 35%;
+    }
+
+    .cardCont{
+        height: 180px;
+
+        h1{
+            font-size: 1rem;
+        }
+
+        h2{
+            font-size: 1.3rem;
+        }
+
+        h3{
+            height: min-content;
+            font-size: 2rem;
+        }
+    }
+
+    .midTextCard{
+        span{
+            font-size: 0.9rem;
+        }
+
+        p{
+            font-size: 1rem;
+        }
+
+        div{
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 372px){
+    .rightSide{
+        transform: rotate(90deg);
+    }
+}
